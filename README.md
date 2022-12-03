@@ -6,7 +6,7 @@ En el examen de selectividad de historia de la Comunidad de Madrid (modelo COVID
 ## Tabla de datos:
 Parametros por defecto (Examen de la Comunidad de Madrid)
 ![Alt text](tabla.jpg)
-Si sabes menos de 3 no puedes responder 4, lógicamente, y por eso es 0%.
+Si sabes menos de 3 no puedes responder 4, lógicamente, y por eso es 0%. </br>
 Si sabes más de 15, entonces te quedan sin saber 8, aunque tengas la mala suerte de que te entren esas 8 en el examen, quedarán 4 que sí sepas, por eso es 100%.
 
 ## Disclaimer Importante
