@@ -1,15 +1,14 @@
-CUESTIONES = 23 #Cuestiones que hay en total
-SABIDAS = 15 #Cuestiones que te sabes
-CUESTIONESOFRECIDAS = 12 #Cuestiones que te ofrecen en el examen
-CUESTIONESNECESARIAS = 4 #Cuestiones que piden que respondas en el examen
+CUESTIONES = int(input("Escriba nº de cuestiones que hay en total (normalmente 23): "))
+SABIDAS = int(input("Escriba nº de cuestiones sabidas (las que has estudiado): "))
+CUESTIONESOFRECIDAS = int(input("Escriba nº de cuestiones que le ofrecen en el examen (normalmente 12): "))
+CUESTIONESNECESARIAS = int(input("Escriba nº de cuestiones que le piden responder en el examen (normalmente 4): "))
 
 
 tope = CUESTIONESOFRECIDAS - CUESTIONESNECESARIAS +1
 def main():
-	probabilidad = 100 * ramificacion(CUESTIONESOFRECIDAS, 7, CUESTIONES-7, 0, 1.0)
-	for i in range(3,16):
-		print(f"Probabilidad para {i} cuestiones estudiadas: {round(100 * ramificacion(CUESTIONESOFRECIDAS, i, CUESTIONES-i, 0, 1.0),2)}%" )
-	#print(f"Probabilidad final: {probabilidad}" )
+	probabilidad = 100 * ramificacion(CUESTIONESOFRECIDAS, SABIDAS, CUESTIONES-SABIDAS, 0, 1.0)
+	print(f"Probabilidad final: {round(probabilidad,2)}%" )
+
 
 def ramificacion(preguntasRestantes, sabidasRestantes, sinSaberRestantes, errores, probabilidadActual):
 	#Si esta rama ha cateado ya, ni nos molestamos en calcular sus subdivisiones
